@@ -144,8 +144,8 @@ body {
 }
 /* FOR MOBILE */
 @media (max-width:480px) {
-  body {
-    overflow: hidden;
+  html ,body {
+    overflow: scroll;
     height: auto;
   }
   .container {
@@ -165,7 +165,8 @@ body {
     height: 500px;
   }
   .signature_pad {
-    position: fixed;
+    /* position: fixed; */
+    margin-top:25px;
     padding-bottom: 15px;
     width: 100%;
     bottom: 0;
