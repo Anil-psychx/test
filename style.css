@@ -139,10 +139,9 @@ body {
   cursor: pointer;
 }
 /* FOR MOBILE */
-@media screen and (max-device-width: 480px) {
+@media (max-width:480px) {
   body {
-    margin-bottom: 325px;
-    overflow: scroll;
+    overflow: hidden;
     height: auto;
   }
   .container {
