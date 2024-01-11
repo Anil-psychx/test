@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    .full-height-row {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .scrollable-column {
+      flex: 1;
+      overflow-y: auto;
+    }
+
+    .fixed-bottom-column {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #f8f9fa; /* Adjust the background color as needed */
+      z-index: 1000; /* Ensure it's above other content */
+    }
+
+    @media (min-width: 481px) {
+      .full-height-row {
+        flex-direction: row;
+      }
+
+      .fixed-bottom-column {
+        position: static; /* Unfix the column on larger screens */
+        width: 50%; /* Adjust the width as needed */
+        background-color: transparent; /* Remove background color on larger screens */
+        z-index: auto; /* Reset z-index on larger screens */
+      }
+    }
+  </style>
+  <title>Responsive Columns with Fixed Bottom</title>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row full-height-row">
+    <div class="col-12 col-md-6 scrollable-column">
+      <!-- Content for the first column -->
+      <!-- Add enough content here to make the column scrollable on smaller screens -->
+      <p>This is the content of the first column. Add enough content here to make the column scrollable on smaller screens.</p>
+    </div>
+    <div class="col-12 col-md-6 fixed-bottom-column">
+      <!-- Content for the second column -->
+      <p>This is the content of the second column. It will be fixed at the bottom on smaller screens and side by side on larger screens.</p>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
