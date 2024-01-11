@@ -111,3 +111,16 @@ html,body{
     border-top: 1px solid #09b609;
     border-left: 1px solid #09b609;
   }
+  /* loader */
+#loader{
+  position:fixed;
+  top:0;
+  left:0;
+  width :100vw;
+  height:100vh;
+  background:grey;
+  z-index:1001;
+  display:flex;
+  justify-content: center;
+    align-items: center;
+}
